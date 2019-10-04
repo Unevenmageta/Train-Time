@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        
+    <script src="/common/java.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    
+    <link rel="stylesheet" href="/common/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid text-center text-light">
+                    <div class="container" id="conHead">
+                        <h3>Train Schedule</h3>
+                        <h5>See what upcoming train times and info</h5>
+                    </div>
+                </div>
+                <div class="card  my-3">
+                    <div class="card-header  font-weight-bold">Train info</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card  my-3">
+                    <div class="card-header  font-weight-bold">Add Train Scheduling</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name" class="text">Train Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Detroit Dash">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination" class="text">Destination </label>
+                                <input type="text" class="form-control" id="des" placeholder="Detroit">
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-group">
+                                <label for="trainTime" class="text">First Train Time (Ex: 15:30 pm)</label>
+                                <input type="time" class="form-control" id="time" >
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency" class="text">Frequency(min)</label>
+                                <input type="number" class="form-control" id="freq">
+                            </div>
+                            <button class="btn btn-primary" id="submit" type="button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="form-group">
+            <label for="trainTime" class="text-dark">First Train Time (Military Time)</label>
+            <input type="number" class="form-control" id="time" >
+        </div> -->
+
+
+</body>
+
+</html>

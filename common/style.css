@@ -1,0 +1,42 @@
+body{
+    background-color: #123c69
+    
+}
+
+.card{
+    color: white;
+    background-color: #123c69;
+}
+
+.card-body{
+    color: black;
+    background-color: white;
+
+
+}
+.card-header{
+    background-color: #ac3b61;
+    color:black;
+
+}
+
+.jumbotron{
+
+    background-color: #EDC7B7
+  
+}
+
+
+.text-dark{
+    color: white;
+
+}
+
+#conHead{
+    color: black
+}
+
+#submit{
+    color: black;
+    background-color: #EDC7B7
+}
